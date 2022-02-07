@@ -5,7 +5,7 @@ block variables
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
-  - const hasFooter = true
+  - const hasFooter = false
   - const footerMods = ""
   - const currentPage = "index" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
 
@@ -13,6 +13,6 @@ block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+    +to-do()
 
 block modals

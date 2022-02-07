@@ -1,0 +1,183 @@
+.to-do {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 71px 0 25px;
+	background-color: $color-white-smoke;
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	&__heading {
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 13px;
+	}
+	&__select {
+		max-width: 125px;
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 13px;
+	}
+	&__input-wrapper {
+		width: 100%;
+		margin: 15px 0 0;
+		display: flex;
+		position: relative;
+	}
+	&__input {
+		width: 100%;
+		height: 38px;
+		padding: 15px;
+		background-color: $color-default-white;
+		border: none;
+		outline: none;
+		font-size: 0.8em;
+		line-height: 120%;
+		&:focus-visible {
+			box-shadow: 0 0 2px $color-spindle;
+		}
+		&::placeholder {
+			font-weight: 300;
+			font-size: 11px;
+			line-height: 120%;
+			color: $color-spindle;
+		}
+	}
+	&__add-btn {
+		margin: 0;
+		padding: 10px;
+		background-color: $color-transparent;
+		position: absolute;
+		top: -7px;
+		left: auto;
+		right: -7px;
+	}
+	&__items-wrapper {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	&__items {
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+		overflow-y: auto;
+	}
+	&__item {
+		width: 100%;
+		min-height: 44px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $color-default-white;
+		padding: 2.5px 10px;
+		&:not(:last-of-type) {
+			margin-bottom: 5px;
+		}
+	}
+	&__custom-checkbox {
+		width: 100%;
+		.custom-checkbox {
+			&__label {
+				position: relative;
+				width: 100%;
+				cursor: pointer;
+			}
+			/* для элемента input c type="checkbox" */
+			&__input {
+				position: absolute;
+				z-index: -1;
+				opacity: 0;
+			}
+
+			/* для элемента label, связанного с .custom-checkbox */
+			&__span {
+				width: 100%;
+				display: inline-flex;
+				align-items: flex-start;
+				user-select: none;
+				font-family: $ff-secondary;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 15px;
+				padding: 1em 0;
+				/* создание в label псевдоэлемента before со следующими стилями */
+				&::before {
+					content: "";
+					display: inline-block;
+					flex: 0 0 13px;
+					height: 13px;
+					border: 2px solid $color-link-water;
+					margin-right: 0.63em;
+					// background-repeat: no-repeat;
+					// background-position: center center;
+					// background-size: 50% 50%;
+				}
+				&::after {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: 4px;
+					left: 0.22em;
+					width: 7px;
+					height: 7px;
+					border-radius: 50%;
+					background-color: $color-maya-blue;
+					transition: all $trans-default;
+					transform: scale(0);
+				}
+			}
+
+			/* стили при наведении курсора на checkbox */
+			&__input:not(:disabled):not(:checked) + span:hover::before {
+				border-color: $color-maya-blue;
+			}
+
+			/* стили для активного чекбокса (при нажатии на него) */
+			&__input:not(:disabled):active + span::before {
+				background-color: $color-transparent;
+				border-color: $color-maya-blue;
+			}
+
+			/* стили для чекбокса, находящегося в фокусе */
+			&__input:focus-visible + span::before {
+				box-shadow: 0 0 4px $color-maya-blue;
+			}
+
+			/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+			&__input:focus:not(:checked) + span::before {
+				box-shadow: 0 0 4px $color-spindle;
+			}
+
+			/* стили для чекбокса, находящегося в состоянии checked */
+			&__input:checked + span {
+				text-decoration-line: line-through;
+			}
+			&__input:checked + span::after {
+				transform: scale(1);
+			}
+
+			/* стили для чекбокса, находящегося в состоянии disabled */
+			&__input:disabled + span::before {
+				background-color: #e9ecef;
+			}
+		}
+	}
+	&__btn-close {
+		margin: 0;
+		background-color: $color-transparent;
+		padding: 10px 7.5px;
+		svg {
+			pointer-events: none;
+		}
+	}
+}

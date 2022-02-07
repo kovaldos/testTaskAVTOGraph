@@ -40,9 +40,9 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-767 {
-      padding: 60px 16px;
-    }
+    // @include vp-767 {
+    //   padding: 60px 16px;
+    // }
   }
 
   &__overlay {
@@ -64,10 +64,10 @@
 
     background-color: $color-default-white;
 
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
+    // @include vp-767 {
+    //   width: 100%;
+    //   padding: 20px;
+    // }
   }
 
   &__close-btn {
@@ -95,9 +95,9 @@
     .modal__content {
       width: auto;
 
-      @include vp-767 {
-        width: 100%;
-      }
+      // @include vp-767 {
+      //   width: 100%;
+      // }
     }
   }
 
