@@ -56,23 +56,25 @@
       </header>
       <main>
         <div class="to-do">
-          <div class="container to-do__container to-do__container_top">
-            <div class="to-do__heading">
-              <h1 class="to-do__title title--h1">Avtograph TODO list</h1>
-              <div class="custom-select" id="select01"></div>
+          <div class="container">
+            <div class="to-do__wrapper to-do__wrapper_top">
+              <div class="to-do__heading">
+                <h1 class="to-do__title title--h1">Avtograph TODO list</h1>
+                <div class="custom-select" id="select01"></div>
+              </div>
+              <div class="to-do__input-wrapper"> 
+                <input class="to-do__input" type="text" name="todoText" placeholder="Поле ввода">
+                <button class="btn to-do__add-btn" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-button-plus"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <div class="to-do__input-wrapper"> 
-              <input class="to-do__input" type="text" name="todoText" placeholder="Поле ввода">
-              <button class="btn to-do__add-btn" type="button">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-button-plus"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="container to-do__container to-do__container_bottom">
-            <div class="to-do__items-wrapper">
-              <ul class="to-do__items"></ul>
+            <div class="to-do__wrapper to-do__wrapper_bottom">
+              <div class="to-do__items-wrapper">
+                <ul class="to-do__items"></ul>
+              </div>
             </div>
           </div>
         </div>

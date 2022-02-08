@@ -488,6 +488,7 @@ body {
   height: 100%;
   min-width: 320px;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 a {
@@ -615,7 +616,6 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 }
@@ -628,9 +628,6 @@ button,
 
 .wrapper main {
   width: 100%;
-  height: 100%;
-  min-height: 100%;
-  padding: 46px 0 25px;
   background: #F2F2F2;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -1239,25 +1236,20 @@ button,
 
 .to-do {
   width: 100%;
-  height: 100%;
-  padding: 128px 0 30px;
   margin: 0 auto;
-  max-width: 768px;
+  padding: 46px 0 25px;
   background-color: #F2F2F2;
-  overflow-y: auto;
-}
-
-.to-do__container_top {
-  position: fixed;
-  top: 46px;
-  z-index: 10;
-  background: inherit;
-  padding: 0 22px 10px 22px;
+  overflow: hidden;
 }
 
 .to-do__wrapper {
   width: 100%;
-  height: 100%;
+}
+
+.to-do__wrapper_bottom {
+  height: calc(100vh - 205px);
+  overflow: hidden;
+  padding-top: 10px;
 }
 
 .to-do__heading {
@@ -1358,12 +1350,13 @@ button,
 
 .to-do__items-wrapper {
   width: 100%;
-  height: 100%;
+  height: inherit;
+  overflow-y: auto;
 }
 
 .to-do__items {
   width: 100%;
-  padding: 10px 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -1551,11 +1544,6 @@ button,
   }
 
   .to-do {
-    padding: 137px 0 30px;
-  }
-
-  .to-do__container_top {
-    top: 55px;
-    padding: 0 25px 10px 25px;
+    padding: 55px 0 25px;
   }
 }

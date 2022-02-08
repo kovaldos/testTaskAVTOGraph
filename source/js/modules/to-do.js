@@ -52,6 +52,9 @@ const initToDo = () => {
           if (e.target === parentEl.querySelector('.to-do__btn-close') && item.title === inputLabelValue) {
             parentEl.style.display = 'none';
           }
+          if (e.target === parentEl.querySelector('.custom-checkbox__span')) {
+            parentEl.classList.toggle('checked');
+          }
         });
       });
     });

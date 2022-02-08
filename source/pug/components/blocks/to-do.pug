@@ -1,13 +1,14 @@
 mixin to-do()
 	.to-do
-		.container.to-do__container.to-do__container_top
-			.to-do__heading
-				h1.to-do__title.title--h1 Avtograph TODO list
-				.custom-select#select01
-			.to-do__input-wrapper 
-				input.to-do__input(type="text", name="todoText" placeholder="Поле ввода")
-				button.btn.to-do__add-btn(type="button")
-					+icon("icon-button-plus", 32, 32)
-		.container.to-do__container.to-do__container_bottom
-			.to-do__items-wrapper
-				ul.to-do__items
+		.container
+			.to-do__wrapper.to-do__wrapper_top
+				.to-do__heading
+					h1.to-do__title.title--h1 Avtograph TODO list
+					.custom-select#select01
+				.to-do__input-wrapper 
+					input.to-do__input(type="text", name="todoText" placeholder="Поле ввода")
+					button.btn.to-do__add-btn(type="button")
+						+icon("icon-button-plus", 32, 32)
+			.to-do__wrapper.to-do__wrapper_bottom
+				.to-do__items-wrapper
+					ul.to-do__items
