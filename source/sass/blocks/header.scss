@@ -4,6 +4,7 @@
   padding: 11px 0;
   background-color: $color-default-white;
   min-height: 46px;
+  z-index: 5;
   @include vp-375 {
     min-height: 55px;
   }

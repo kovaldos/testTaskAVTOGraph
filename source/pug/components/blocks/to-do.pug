@@ -1,36 +1,13 @@
 mixin to-do()
 	.to-do
-		.to-do__wrapper
-			.container 
-				.to-do__heading
-					h1.to-do__title.title--h1 Avtograph TODO list
-					.custom-select#select01
-					//- .to-do__select.to-do__options.custom-select
-					//- 	.custom-select__inner 
-					//- 		.custom-select__current Все
-					//- 		.custom-select__icon
-					//- 			svg(width='10' height='10' aria-hidden='true')
-					//- 				use(xlink:href='#icon-arrow-down-bold')
-					//- 	.custom-select__body
-					//- 		label.custom-select__label-item.is-active Все
-					//- 			input(type='hidden' name='option' value="all")
-					//- 		label.custom-select__label-item Выполненные
-					//- 			input(type='hidden' name='option' value="completed")
-					//- 		label.custom-select__label-item В работе
-					//- 			input(type='hidden' name='option' value="active")
-				.to-do__input-wrapper 
-					input.to-do__input(type="text", name="todoText" placeholder="Поле ввода")
-					button.btn.to-do__add-btn(type="button")
-						+icon("icon-button-plus", 32, 32)
-				.to-do__items-wrapper
-					ul.to-do__items
-						//- li.to-do__item(data-todo-state="active")
-						//- 	.to-do__custom-checkbox.custom-checkbox
-						//- 		label.custom-checkbox__label
-						//- 			input.custom-checkbox__input#to-do-check(type="checkbox" name="to-do-check" value="value-01")
-						//- 			span.custom-checkbox__span TODO item 1
-						//- 	span.todo__action.todo__action_restore(data-todo-action="active")
-						//- 	span.todo__action.todo__action_complete(data-todo-action="completed")
-						//- 	span.todo__action.todo__action_delete(data-todo-action="deleted")
-						//- 	button.btn.to-do__btn-close(type="button")
-						//- 		+icon("icon-close-bold", 10, 10)
+		.container.to-do__container.to-do__container_top
+			.to-do__heading
+				h1.to-do__title.title--h1 Avtograph TODO list
+				.custom-select#select01
+			.to-do__input-wrapper 
+				input.to-do__input(type="text", name="todoText" placeholder="Поле ввода")
+				button.btn.to-do__add-btn(type="button")
+					+icon("icon-button-plus", 32, 32)
+		.container.to-do__container.to-do__container_bottom
+			.to-do__items-wrapper
+				ul.to-do__items

@@ -20,20 +20,20 @@ const initCustomSelect = () => {
         toDoItems.forEach((item) => {
           if (select.value === 'completed') {
             if (!item.classList.contains('checked')) {
-              item.classList.add('visually-hidden');
+              item.classList.add('is-hidden');
             } else {
-              item.classList.remove('visually-hidden');
+              item.classList.remove('is-hidden');
             }
           }
           if (select.value === 'active') {
             if (item.classList.contains('checked')) {
-              item.classList.add('visually-hidden');
+              item.classList.add('is-hidden');
             } else {
-              item.classList.remove('visually-hidden');
+              item.classList.remove('is-hidden');
             }
           }
           if (select.value === 'all') {
-              item.classList.remove('visually-hidden');
+              item.classList.remove('is-hidden');
           }
         });
       },
