@@ -4,7 +4,7 @@ mixin header(headerMods, currentPage)
       if(currentPage === "index")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo
-          img(src="../img/svg/header-logo.svg", alt="Логотип")
+          img(src="./img/svg/header-logo.svg", alt="Логотип")
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           img(src="../img/svg/header-logo.svg", alt="Логотип")
