@@ -88,8 +88,12 @@
 		align-items: center;
 		background-color: $color-default-white;
 		padding: 2.5px 10px;
+		transition: all $trans-default;
 		&:not(:last-of-type) {
 			margin-bottom: 5px;
+		}
+		&.checked {
+			opacity: 0.5;
 		}
 	}
 	&__custom-checkbox {
